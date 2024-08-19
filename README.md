@@ -28,7 +28,7 @@ Este proyecto es una aplicación web que permite encriptar y desencriptar texto 
 2. Navega al directorio del proyecto:
 
 ```
-   cd encriptador
+   cd encrypt
 ```
 
 3. Abre el archivo `index.html` en tu navegador.
