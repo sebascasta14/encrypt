@@ -1,62 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <link rel="stylesheet" href="./scr/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet" />
-</head>
+      href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <h4 class="tittle">Encriptador - Desencriptador</h6>
-            <button class="theme-toggle">
-                <i class="fas fa-moon"></i>
-            </button>
+      <h4 class="tittle">Encriptador - Desencriptador</h4>
+      <button class="theme-toggle" onclick="btnMode()">
+        <i id="icon" class="fas fa-moon"></i>
+      </button>
     </header>
     <main>
-        <section>
-            <textarea class="text-input" cols="30" row="10" placeholder="Ingrese el texto aqui"></textarea>
-            <div class="information">
-                <i class="fa-solid fa-circle-exclamation"></i>
-                <p>Solo letras minúsculas y sin acentos</p>
-            </div>
-            <div class="btn">
-                <button class="btn-encode">Encriptar</button>
-                <button class="btn-decode">Desencriptar</button>
-            </div>
-        </section>
-        <section>
-            <div class="text-space">
-                <p class="text" id="coded-text"></p>
-                <h4 class="text-tittle">Ningún mensaje fue encontrado</h4>
-                <p class="text">
-                    Ingresa el texto que desees encriptar o desencriptar.
-                </p>
-            </div>
-            <div>
-                <button class="btn-copy">Copiar</button>
-            </div>
-        </section>
+      <section>
+        <textarea
+          class="text-input"
+          cols="30"
+          row="10"
+          placeholder="Ingrese el texto aqui"
+        ></textarea>
+        <div class="information">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <p>Solo letras minúsculas y sin acentos</p>
+        </div>
+        <div class="btn">
+          <button class="btn-encode" onclick="btnEncrypt()">Encriptar</button>
+          <button class="btn-decode" onclick="btnDecode()">Desencriptar</button>
+        </div>
+      </section>
+      <section>
+        <div class="text-space">
+          <div class="text-output"></div>
+          <h4 class="text-tittle">Ningún mensaje fue encontrado</h4>
+          <p class="text">
+            Ingresa el texto que desees encriptar o desencriptar.
+          </p>
+        </div>
+        <div>
+          <button class="btn-copy">Copiar</button>
+        </div>
+      </section>
     </main>
     <footer>
-        <p>© 2024 Juan Sebastián Castañeda González.</p>
-        <p>Todos los derechos reservados.</p>
-        <p>Contacto:
-            <i class="fa-brands fa-github"></i>
-            <a href="https://github.com/sebascasta14" target="_blank">GitHub</a> |
-            <i class="fa-brands fa-linkedin"></i>
-            <a href="https://www.linkedin.com/in/sebastian-castaneda-27564b236/" target="_blank">LinkedIn</a>
-        </p>
+      <p>© 2024 Juan Sebastián Castañeda González.</p>
+      <p>Todos los derechos reservados.</p>
+      <p>
+        Contacto:
+        <i class="fa-brands fa-github"></i>
+        <a href="https://github.com/sebascasta14" target="_blank">GitHub</a> |
+        <i class="fa-brands fa-linkedin"></i>
+        <a
+          href="https://www.linkedin.com/in/sebastian-castaneda-27564b236/"
+          target="_blank"
+          >LinkedIn</a
+        >
+      </p>
     </footer>
     <script src="./scr/App.js"></script>
-</body>
-
+  </body>
 </html>

@@ -4,10 +4,10 @@
   --background-color-dark: #010409;
   --text-color-dark: #e6edf3;
 
-  --background-color-invested: var(--background-color-dark);
   --background-color: var(--background-color-light);
-  --text-color-invested: var(--text-color-dark);
+  --background-color-invested: var(--background-color-dark);
   --text-color: var(--text-color-light);
+  --text-color-invested: var(--text-color-dark);
 }
 
 * {
