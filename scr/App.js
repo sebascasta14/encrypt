@@ -74,11 +74,11 @@ const Decode = (text) => {
 
 const updateVisibility = () => {
     if (textOutput.textContent.trim() === "") {
-        btnCopy.classList.add("hidden");
+        btnCopy.setAttribute("hidden", "hidden")
         textTittle.style.display = "block";
         textParagraph.style.display = "block";
     } else {
-        btnCopy.classList.remove("hidden");
+        btnCopy.removeAttribute("hidden");
         textTittle.style.display = "none";
         textParagraph.style.display = "none";
     }
@@ -87,11 +87,11 @@ const updateVisibility = () => {
 /* "Funcion de verificacion"
  Reemplaza el caracter no valido por un "" en el instante que lo digita.
     El caracter no valida ingresado:
-    El usuario no lo visualiza
-    No se almacena en la variable
-    No se tiene en cuenta en la encriptacion*/
+        El usuario no lo visualiza
+        No se almacena en la variable
+        No se tiene en cuenta en la encriptacion*/
 textInput.addEventListener("input", () => {
-    textInput.value = textInput.value.replace(/[^a-z0-9]/g, "");
+    textInput.value = textInput.value.replace(/[^a-z0-9 ]/g, "");
 });
 
 const copyText = () => {
