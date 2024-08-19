@@ -35,7 +35,7 @@ const btnMode = () => {
         "--text-color-invested",
         isDarkMode ? "var(--text-color-light)" : "var(--text-color-dark)"
     );
-    icon.className = isDarkMode ? "fas fa-sun" : "fas fa-moon";
+    icon.className = isDarkMode ? "fa-regular fa-sun" : "fa-regular fa-moon";
 };
 
 const btnEncrypt = () => {
@@ -93,5 +93,15 @@ const updateVisibility = () => {
 textInput.addEventListener("input", () => {
     textInput.value = textInput.value.replace(/[^a-z0-9]/g, "");
 });
+
+const copyText = () => {
+    const textToCopy = textOutput.textContent;
+    if (textToCopy.trim() !== "") {
+        navigator.clipboard.writeText(textToCopy)
+            .catch(err => {
+                console.error("Error al copiar el texto: ", err);
+            });
+    }
+};
 
 window.onload = updateVisibility;
