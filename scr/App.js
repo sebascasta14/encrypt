@@ -13,11 +13,8 @@ const matrizCode = [
     ["o", "ober"],
     ["u", "ufat"],
 ];
-
 const btnMode = () => {
-    console.log("hola");
     isDarkMode = !isDarkMode;
-
     document.documentElement.style.setProperty(
         "--background-color",
         isDarkMode
@@ -48,6 +45,13 @@ const btnEncrypt = () => {
     updateVisibility();
 };
 
+const btnDecode = () => {
+    const textEncrypt = Decode(textInput.value);
+    textOutput.textContent = textEncrypt;
+    textInput.value = "";
+    updateVisibility();
+};
+
 const encrypt = (text) => {
     text = text.toLowerCase();
     for (let i = 0; i < matrizCode.length; i++) {
@@ -56,13 +60,6 @@ const encrypt = (text) => {
         }
     }
     return text;
-};
-
-const btnDecode = () => {
-    const textEncrypt = Decode(textInput.value);
-    textOutput.textContent = textEncrypt;
-    textInput.value = "";
-    updateVisibility();
 };
 
 const Decode = (text) => {
@@ -86,5 +83,15 @@ const updateVisibility = () => {
         textParagraph.style.display = "none";
     }
 };
+
+/* "Funcion de verificacion"
+ Reemplaza el caracter no valido por un "" en el instante que lo digita.
+    El caracter no valida ingresado:
+    El usuario no lo visualiza
+    No se almacena en la variable
+    No se tiene en cuenta en la encriptacion*/
+textInput.addEventListener("input", () => {
+    textInput.value = textInput.value.replace(/[^a-z0-9]/g, "");
+});
 
 window.onload = updateVisibility;
