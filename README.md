@@ -22,7 +22,7 @@ Este proyecto es una aplicación web que permite encriptar y desencriptar texto 
 1. Clona el repositorio:
 
 ```
-   git clone https://github.com/tu_usuario/encriptador.git
+   git clone https://github.com/sebascasta14/encrypt.git
 ```
 
 2. Navega al directorio del proyecto:
