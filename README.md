@@ -44,11 +44,15 @@ Este proyecto es una aplicación web que permite encriptar y desencriptar texto 
 
 ### Modo Claro
 
-![Modo Claro](./assets/modo_claro.png)
+![Modo Claro](./assets/modo_claro1.png)
+![Modo Claro](./assets/modo_claro2.png)
+![Modo Claro](./assets/modo_claro3.png)
 
 ### Modo Oscuro
 
-![Modo Oscuro](./assets/modo_oscuro.png)
+![Modo Oscuro](./assets/modo_oscuro1.png)
+![Modo Oscuro](./assets/modo_oscuro2.png)
+![Modo Oscuro](./assets/modo_oscuro3.png)
 
 ## Licencia
 
